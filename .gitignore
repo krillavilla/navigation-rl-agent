@@ -2,22 +2,50 @@
 __pycache__/
 *.py[cod]
 *.class
+*.so
+.Python
 
 # Virtual environments
 env/
 venv/
+.venv/
+ENV/
+nav-rl-venv/
 
-# Distribution / build
+# Distribution/build
 build/
 dist/
 *.egg-info/
+.eggs/
+*.egg
 
 # Jupyter
 .ipynb_checkpoints/
 
 # Data, models, results
-*.tar.gz
 models/*
 !models/.gitkeep
+!models/checkpoint_final.pt
+
 results/*
 !results/.gitkeep
+
+# Unity environment binaries
+environment/*
+!environment/.gitkeep
+
+# Checkpoints & weights
+*.pt
+*.pth
+
+# IDE settings
+.idea/
+.vscode/
+
+# Swap files
+*.swp
+*.swo
+
+# OS-specific
+.DS_Store
+Thumbs.db

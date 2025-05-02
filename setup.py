@@ -6,17 +6,30 @@ from setuptools import setup, Command, find_packages
 with open('requirements.txt') as f:
     required = f.read().splitlines()
 
-setup(name='unityagents',
-      version='0.4.0',
-      description='Unity Machine Learning Agents',
-      license='Apache License 2.0',
-      author='Unity Technologies',
-      author_email='ML-Agents@unity3d.com',
-      url='https://github.com/Unity-Technologies/ml-agents',
+setup(name='navigation-rl-agent',
+      version='1.0.0',
+      description='Deep Q-Network (DQN) for Unity Banana Collector Environment',
+      license='MIT License',
+      author='Kashad J. Turner‑Warren',
+      author_email='krillavilla@example.com',
+      url='https://github.com/krillavilla/navigation-rl-agent',
       packages=find_packages(),
-      install_requires = required,
-      long_description= ("Unity Machine Learning Agents allows researchers and developers "
-       "to transform games and simulations created using the Unity Editor into environments "
-       "where intelligent agents can be trained using reinforcement learning, evolutionary " 
-       "strategies, or other machine learning methods through a simple to use Python API.")
+      install_requires=required,
+      python_requires='>=3.6',
+      classifiers=[
+          'Development Status :: 4 - Beta',
+          'Intended Audience :: Developers',
+          'Intended Audience :: Education',
+          'Intended Audience :: Science/Research',
+          'License :: OSI Approved :: MIT License',
+          'Programming Language :: Python :: 3',
+          'Programming Language :: Python :: 3.6',
+          'Programming Language :: Python :: 3.7',
+          'Programming Language :: Python :: 3.8',
+          'Topic :: Scientific/Engineering :: Artificial Intelligence',
+      ],
+      long_description=("A Deep Q-Network (DQN) implementation for solving the Unity Banana Collector "
+                        "environment. This project demonstrates reinforcement learning techniques "
+                        "including experience replay, target networks, and epsilon-greedy exploration "
+                        "to train an agent to navigate and collect yellow bananas while avoiding blue ones.")
      )

@@ -22,10 +22,21 @@ default:
     curiosity_enc_size: 128
 
 BananaBrain:
+    trainer: dqn
     normalize: false
-    batch_size: 1024
-    beta: 5.0e-3
-    buffer_size: 10240
+    batch_size: 64
+    buffer_size: 100000
+    gamma: 0.99
+    tau: 0.001
+    learning_rate: 5.0e-4
+    update_every: 4
+    epsilon_start: 1.0
+    epsilon_end: 0.01
+    epsilon_decay: 0.995
+    hidden_units: 64
+    num_layers: 2
+    max_steps: 2.0e6
+    summary_freq: 1000
 
 BouncerBrain:
     normalize: true
